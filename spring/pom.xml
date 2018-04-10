@@ -9,7 +9,7 @@
 	<description>Demo project for Spring Boot</description>
 
 	<parent>
-		<groupId>com.swagger</groupId>
+		<groupId>com.app</groupId>
 	<artifactId>spring-angular</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	</parent>
@@ -31,6 +31,15 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		
+		 <dependency>
+            <groupId>com.app</groupId>
+            <artifactId>angular</artifactId>
+            <version>${project.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        
+        
 	</dependencies>
 
 	<build>
