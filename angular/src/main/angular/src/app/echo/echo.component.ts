@@ -19,6 +19,7 @@ export class EchoComponent implements OnInit {
   
     inputMsg = '';
   outputMsg = '';
+  errorMsg = '';
   
   getMsg(event) {
   console.log('in getMsg');
@@ -26,6 +27,7 @@ export class EchoComponent implements OnInit {
                   .getEcho(this.inputMsg)
 		          .subscribe( Response => {
 		              console.log(Response);
+		              this.outputMsg = Response;
 		              
 		           }, resFileError => this.errorMsg = resFileError);
   }

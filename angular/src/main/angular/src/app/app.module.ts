@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-
+import { Http, HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { EchoComponent } from './echo/echo.component';
@@ -14,7 +14,8 @@ import { EchoComponent } from './echo/echo.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]

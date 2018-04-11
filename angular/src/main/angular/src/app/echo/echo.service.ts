@@ -14,12 +14,12 @@ private _url: string =  '';
 
   getEcho(msg:string) {
   
-      return this._http.get(this._url+"/echo")
+      return this._http.get(this._url+"/echo?msg="+msg)
            .map( (response: Response) =>{
               if(response.status < 200 || response.status >= 300) {
                 throw new Error('This request has failed ' + response.status)
               } else {
-               return response.json();
+               return response.text();
               }
             })
            .catch(this._errorHandler);
